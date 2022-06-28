@@ -1,6 +1,12 @@
 """
+Modified version of moist_QG_channel.py, developed by N Lutsko at Scripps
+Some levels are added to the main code structure to allow automation of tasks
+
+Original:
+
 Moist QG channel model developed by N Lutsko at Scripps
 See Lutsko and Hell (2021) for model description.
+
 
 email for questions: nlutsko@ucsd.edu
 """
@@ -15,6 +21,8 @@ import qg_io
 #######################################################
 #  Declare some parameters, arrays, etc.
 def model_run(val_Er):
+# ~ model_run function runs the moist_QG_channel code iteratively for a give val_Er (evaporation rate) parameter
+# ~ This allows the code to run iteratively for a list of parameters and save each run into a specific folder 
 	opt = 3 # 1 = just the linear parts, 2 = just the nonlinear parts, 3 = full model
 	model = "moist" #moist or dry
 
